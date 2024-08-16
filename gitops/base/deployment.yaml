@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: example
+  name: example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: example
+    spec:
+      containers:
+      - image: ghcr.io/nkzk/example-go-image:release
+        imagePullPolicy: Always
+        name: example-go-image
+        resources: {}
+status: {}

@@ -1,0 +1,14 @@
+resources:
+  - ../../base
+  - namespace.yaml
+
+namespace: app-dev
+
+patches:
+   - target:
+       kind: Ingress
+       name: example
+     patch: |-
+       - op: replace
+         path: /spec/rules/0/host
+         value: example-dev.localhost
