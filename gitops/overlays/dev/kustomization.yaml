@@ -2,13 +2,13 @@ resources:
   - ../../base
   - namespace.yaml
 
-namespace: app-dev
+namespace: example-dev
 
 patches:
    - target:
-       kind: Ingress
+       kind: Route
        name: example
      patch: |-
        - op: replace
-         path: /spec/rules/0/host
+         path: /spec/host
          value: example-dev.localhost

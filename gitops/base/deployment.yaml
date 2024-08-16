@@ -18,8 +18,9 @@ spec:
         app: example
     spec:
       containers:
-      - image: ghcr.io/nkzk/example-go-image:release
+      - image: ghcr.io/alfredtm/example-go-workshop:latest
         imagePullPolicy: Always
         name: example-go-image
         resources: {}
-status: {}
+        ports:
+        - containerPort: 4000

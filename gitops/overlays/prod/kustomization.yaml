@@ -2,4 +2,4 @@ resources:
   - namespace.yaml
   - ../../base
 
-namespace: app-prod
+namespace: example-prod
